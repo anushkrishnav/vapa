@@ -1,1 +1,210 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAPA - Validated Path</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSva80qn921XF6JDyEMAvAcAibZTDL4nIuOdA&s') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        header nav {
+            display: flex;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #bb86fc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .milestone {
+            display: flex;
+            align-items: flex-start;
+            margin: 2rem 0;
+            flex-direction: row;
+            cursor: pointer;
+        }
+
+        .milestone:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .milestone-icon {
+            background-color: #bb86fc;
+            color: #000;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .milestone-content {
+            flex: 1;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 1px solid #bb86fc;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .milestone-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #bb86fc;
+        }
+
+        .milestone-content p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #eee;
+        }
+
+        .milestone img, .milestone audio {
+            max-width: 100%;
+            margin-top: 1rem;
+            border-radius: 8px;
+        }
+
+        .details-container {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.9);
+            border: 1px solid #6200ea;
+            border-radius: 8px;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+    <script>
+        function toggleDetails(id) {
+            const container = document.getElementById(id);
+            if (container.style.display === 'block') {
+                container.style.display = 'none';
+            } else {
+                container.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>VAPA - Validated Path</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Spaces</a>
+            <a href="#">Lists</a>
+            <a href="#">Profile</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="milestone" onclick="toggleDetails('details-1')">
+            <div class="milestone-icon">1</div>
+            <div class="milestone-content">
+                <div class="milestone-title">Step 1: Understand the Telescope</div>
+                <p>Familiarize yourself with the telescope's parts, including the tripod, mount, and eyepieces.</p>
+                <img src="https://m.media-amazon.com/images/I/71P0J9XPmBL.jpg" alt="Telescope">
+            </div>
+        </div>
+        <div id="details-1" class="details-container">
+            <p><strong>What not to do:</strong></p>
+            <ul>
+                <li>Do not handle the lenses without cleaning your hands.</li>
+                <li>Avoid forcing parts together; refer to the manual if unsure.</li>
+                <li>Do not expose the telescope to direct sunlight without a solar filter.</li>
+            </ul>
+        </div>
+
+        <div class="milestone" onclick="toggleDetails('details-2')">
+            <div class="milestone-icon">2</div>
+            <div class="milestone-content">
+                <div class="milestone-title">Step 2: Choose the Right Location</div>
+                <p>Select a dark, open area free from city lights to set up your telescope.</p>
+            </div>
+        </div>
+        <div id="details-2" class="details-container">
+            <p><strong>What not to do:</strong></p>
+            <ul>
+                <li>Do not set up near bright lights or reflective surfaces.</li>
+                <li>Avoid uneven or unstable ground to prevent tipping.</li>
+                <li>Do not place the telescope in high-traffic areas.</li>
+            </ul>
+        </div>
+
+        <div class="milestone" onclick="toggleDetails('details-3')">
+            <div class="milestone-icon">3</div>
+            <div class="milestone-content">
+                <div class="milestone-title">Step 3: Assemble the Tripod</div>
+                <p>Set up the tripod on stable ground and ensure it is level.</p>
+            </div>
+        </div>
+        <div id="details-3" class="details-container">
+            <p><strong>What not to do:</strong></p>
+            <ul>
+                <li>Do not tighten screws excessively to avoid damage.</li>
+                <li>Avoid placing the tripod on slippery surfaces.</li>
+                <li>Do not ignore alignment tools provided in the kit.</li>
+            </ul>
+        </div>
+
+        <!-- Additional milestones and what-not-to-do containers follow the same pattern -->
+    </div>
+
+    <footer>
+        <p>&copy; 2025 VAPA - Vali Sollapa | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
